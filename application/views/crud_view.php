@@ -50,14 +50,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                </tr>
-                
+                <?php foreach($table as $row) { ?>
+                    <tr>
+                        <th scope="row"><?= $row->id ?></th>
+                        <td><?= $row->first_name ?></td>
+                        <td><?= $row->last_name ?></td>
+                        <td><?= $row->bio ?></td>
+                        <td><?= $row->date_of_birth ?></td>
+                    </tr>
+                <?php } ?>
             </tbody>
         </table>
     </body>

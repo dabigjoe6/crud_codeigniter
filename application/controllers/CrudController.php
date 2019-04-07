@@ -7,8 +7,10 @@ class CrudController extends CI_Controller {
         $this->load->model('Crud_model');
     }
     public function index() {
+
+        $data = array('table' => $this->Crud_model->getAllData());
         $this->load->view('header');
-        $this->load->view('crud_view');
+        $this->load->view('crud_view', $data);
     }
 
     public function addData() {

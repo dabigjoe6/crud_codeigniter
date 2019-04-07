@@ -15,4 +15,9 @@ class Crud_model extends CI_Model {
 
         return $this->db->insert('crud_table', $data);
     }
+
+    public function getAllData() {
+        $query = $this->db->query('SELECT * FROM crud_table');
+        return $query->result();
+    }
 }
