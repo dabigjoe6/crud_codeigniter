@@ -47,6 +47,7 @@
                     <th scope="col">Last Name</th>
                     <th scope="col">Bio</th>
                     <th scope="col">Date of Birth</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -57,6 +58,7 @@
                         <td><?= $row->last_name ?></td>
                         <td><?= $row->bio ?></td>
                         <td><?= $row->date_of_birth ?></td>
+                        <td scope="col"><a href="<?= site_url('crudcontroller/editdata/' . $row->id) ?>">Edit</a>/<a href="#">Delete</a></td>
                     </tr>
                 <?php } ?>
             </tbody>

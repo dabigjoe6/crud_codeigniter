@@ -17,4 +17,15 @@ class CrudController extends CI_Controller {
         $this->Crud_model->createData();
         redirect('crudcontroller');
     }
+
+    public function editData($id) {
+        $data = array('row' => $this->Crud_model->getData($id));
+        $this->load->view('header');
+        $this->load->view('crud_edit', $data);
+    }
+
+    public function saveEditedData($id) {
+        $this->Crud_model->editData($id);
+        redirect('crudcontroller');
+    }
 }
