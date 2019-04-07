@@ -42,7 +42,6 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">ID</th>
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
                     <th scope="col">Bio</th>
@@ -53,12 +52,11 @@
             <tbody>
                 <?php foreach($table as $row) { ?>
                     <tr>
-                        <th scope="row"><?= $row->id ?></th>
                         <td><?= $row->first_name ?></td>
                         <td><?= $row->last_name ?></td>
                         <td><?= $row->bio ?></td>
                         <td><?= $row->date_of_birth ?></td>
-                        <td scope="col"><a href="<?= site_url('crudcontroller/editdata/' . $row->id) ?>">Edit</a>/<a href="#">Delete</a></td>
+                        <td scope="col"><a href="<?= site_url('crudcontroller/editdata/' . $row->id) ?>">Edit</a>/<a href="<?= site_url('crudcontroller/deleteData/' . $row->id) ?>">Delete</a></td>
                     </tr>
                 <?php } ?>
             </tbody>
